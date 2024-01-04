@@ -16,6 +16,13 @@
       <description>FileTrove is written in Golang and open source (AGPLv3). You can install it by compiling from source or use a precompiled executable for your platform. FileTrove is a single file application without external dependencies, except a NSRL Bolt database. FileTrove can download the database for you.&#xA;Download On Github you can find ready-to-run executables for most common operating systems and platforms like Linux, MacOS or Windows on AMD64 and ARM64.</description>
     </item>
     <item>
+      <title>Update</title>
+      <link>/docs/update/</link>
+      <pubDate>Wed, 03 Jan 2024 19:30:00 +1000</pubDate>
+      <guid>/docs/update/</guid>
+      <description>Update is done via admftrove. Listing of update paths.</description>
+    </item>
+    <item>
       <title>Configuration</title>
       <link>/docs/configure/</link>
       <pubDate>Tue, 28 Feb 2023 19:30:00 +1000</pubDate>
@@ -48,7 +55,7 @@
       <link>/docs/impressum/</link>
       <pubDate>Tue, 28 Feb 2023 22:30:00 +1000</pubDate>
       <guid>/docs/impressum/</guid>
-      <description>Imprint / Impressum Steffen Fritz&#xA;Hauffstraße 4 71696 Möglingen&#xA;E-Mail: steffen AT fritz.wtf&#xA;OpenPGP: Keyserver&#xA;Issues: Github&#xA;Support Information FileTrove is and will be forever open source and free of cost.&#xA;However, support and feature requests can be requested via&#xA;Steffen Fritz - IT Consulting, https://fritz-itc.de&#xA;See all legal information there, https://fritz-itc.de/datenschutz/ and https://fritz-itc.de/impressum/</description>
+      <description>Imprint / Impressum Steffen Fritz&#xA;Hauffstraße 4 71696 Möglingen&#xA;E-Mail: steffen AT fritz.wtf&#xA;OpenPGP: Keyserver&#xA;Issues: Github&#xA;Support Information FileTrove is and will be forever open source and free of cost.&#xA;However, support and features can be requested via&#xA;Steffen Fritz - IT Consulting, https://fritz-itc.de&#xA;See all legal information there, https://fritz-itc.de/datenschutz/ and https://fritz-itc.de/impressum/</description>
     </item>
   </channel>
 </rss>

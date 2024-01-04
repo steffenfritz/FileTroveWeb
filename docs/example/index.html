@@ -95,6 +95,10 @@
     </li>
     
     <li class="">
+      <a href="/docs/update/">Update</a>
+    </li>
+    
+    <li class="">
       <a href="/docs/configure/">Configuration</a>
     </li>
     
@@ -136,6 +140,11 @@
 <h2 id="full-example">Full example</h2>
 <p>The following example will index all files, print all messages to the log file and the screen and read some EXIF data from jpeg and tiff files. The named archivist is &ldquo;Max Mustermann&rdquo; and the project is called after the first hard disk of Max Mustermann. With the d-flag a json file is passed that holds DublinCore metadata that is added to the session in FileTrove&rsquo;s database.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ ./ftrove -i /mnt/usbstick -V -e -a &#34;Max Mustermann&#34; -d dublincore.json -p &#34;Max Mustermann Harddisk No. 1&#34;
+</span></span></code></pre></div><h2 id="resume-an-aborted-session">Resume an aborted session</h2>
+<p>You can resume an aborted or cancelled session. When a session has been cancelled you see no end date in the listing you get with <code>ftrove -l</code>. You can then resume with the flag -r and the seesion UUID of the aborted run.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> $ ./ftrove -l
+</span></span></code></pre></div><p>Copy the session UUID and pass it to ftrove:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> $ ./ftrove -r SESSIONUUID
 </span></span></code></pre></div><h2 id="add-own-entries-to-nsrl-database">Add own entries to NSRL database</h2>
 <p>It can be handy to add own entries to the NSRL database. For example, some hash sums might be missing or you have files you want to mark as known. You can do that with the following steps.</p>
 <ol>

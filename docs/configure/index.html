@@ -94,6 +94,10 @@
       <a href="/docs/install-filetrove/">Install FileTrove</a>
     </li>
     
+    <li class="">
+      <a href="/docs/update/">Update</a>
+    </li>
+    
     <li class="active ">
       <a href="/docs/configure/">Configuration</a>
     </li>
@@ -124,26 +128,28 @@
 <h1 class="title">Configuration</h1>
 <div class="content ">
   <h2 id="command-line-options">Command Line Options</h2>
-<p>Version: 1.0.0-DEV-6</p>
+<p>Version: 1.0.0-DEV-9</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> -a, --archivist string    The name of the person responsible for the scan.
 </span></span><span class="line"><span class="cl"> -d, --dublincore string   Add DublinCore metadata as a JSON file for a session (not single files).
 </span></span><span class="line"><span class="cl"> -e, --exifdata            Get some EXIF metadata from image files.
-</span></span><span class="line"><span class="cl"> -t, --export-tsv string   Export a session from the database to a TSV file. Provide the session uuid.
 </span></span><span class="line"><span class="cl"> -i, --indir string        Input directory to work on.
 </span></span><span class="line"><span class="cl">     --install string      Install FileTrove into the given directory.
 </span></span><span class="line"><span class="cl"> -l, --list-sessions       List session information for all scans. Useful for exports.
 </span></span><span class="line"><span class="cl"> -p, --project string      A name for the project or scan session.
+</span></span><span class="line"><span class="cl"> -r, --resume string       Resume an aborted session. Provide the session uuid of the aborted run. 
+</span></span><span class="line"><span class="cl"> -t, --export-tsv string   Export a session from the database to a TSV file. Provide the session uuid.
 </span></span><span class="line"><span class="cl"> -V, --verbose             Print messages also to the terminal (stdout).
 </span></span><span class="line"><span class="cl"> -v, --version             Show version and build
 </span></span></code></pre></div><h2 id="more-detailed-configuration">More detailed configuration</h2>
 <p>-a : You can pass a name of the person that is responsible for the scan. It will be stored in the database and is in the export TSV file.</p>
 <p>-d : This flag expects a simple json file that holds 15 core elements as keys and your values. An example can be found here: <a href="https://github.com/steffenfritz/FileTrove/blob/main/testdata/dublincore_ex.json">https://github.com/steffenfritz/FileTrove/blob/main/testdata/dublincore_ex.json</a></p>
 <p>-e : This flag extracts 12 EXIF values at the moment. This is still subject to change. You can see extracted values here: <a href="https://github.com/steffenfritz/FileTrove/blob/main/exif.go">https://github.com/steffenfritz/FileTrove/blob/main/exif.go</a> (source code)</p>
-<p>-t : The export flag writes all information of a session to TSV files. It detects if the session was run with the EXIF or Dublin Core flag and just creates the relevant export files.</p>
 <p>-i : The input flag expects a directory and walks it down recursively. Single files are not supported.</p>
 <p>&ndash;install : You have to pass an existing directory where ftrove can install and download needed files. The flag creates a log and db directory. Into db/, FileTrove downloads the siegfried and NSRL database, where the NSRL database is approx 3.5 GB and holds over 65.500.000 hash sums. The siegfried file is just a few kilobytes. FileTrove also creates its own database which is without data also just a few kilobytes. With each run it grows and you have to monitor its size. However, for 100.000 files it is expected that it is just a few megabytes.</p>
 <p>-l : This lists all sessions. You need the UUID to export a session.</p>
 <p>-p : You can pass a name of a project that is connected to the session. It will be stored in the database and is in the export TSV file.</p>
+<p>-r : You can resume a session when it was cancelled on purpose or if a run crashed. Get the session UUID with the -l flag and pass it to the -r flag.</p>
+<p>-t : The export flag writes all information of a session to TSV files. It detects if the session was run with the EXIF or Dublin Core flag and just creates the relevant export files.</p>
 <p>-V : Using this flag you see all output on your screen, not just in the log file.</p>
 <p>-v : This prints the version and build. This is important when creating a bug report.</p>
 

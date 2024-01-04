@@ -95,6 +95,10 @@
     </li>
     
     <li class="">
+      <a href="/docs/update/">Update</a>
+    </li>
+    
+    <li class="">
       <a href="/docs/configure/">Configuration</a>
     </li>
     
@@ -127,12 +131,13 @@
 <h3 id="download">Download</h3>
 <p>On Github you can find ready-to-run executables for most common operating systems and platforms like Linux, MacOS or Windows on AMD64 and ARM64.</p>
 <p>Just download from <a href="https://github.com/steffenfritz/FileTrove/releases">Github</a>, extract the archive and run the program from a terminal/command line.</p>
-<p>Note: This project is called FileTrove, but the executable is called ftrove!</p>
+<p>Note: This project is called FileTrove, but the executable is called ftrove! The builds also have the operatimg system and platform in their name. You can savely rename them or keep the name.</p>
 <p>The releases are tested and the latest version has no known bugs.</p>
 <h3 id="alternative-install-from-source">Alternative: Install from source</h3>
 <p>You can install ftrove from source by compiling it. With an installed Go compiler and set up workspace you can install it with</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">go install github.com/steffenfritz/FileTrove/cmd/ftrove@latest
 </span></span></code></pre></div><p>The binary can be found in $GOPATH/bin.</p>
+<p><em>Note</em>: As FileTrove uses SQLite the compilation on Windows might need some extra work.</p>
 <h3 id="installation">Installation</h3>
 <p>Copy the binary to a location where FileTrove should save the results, logs and where the 3.5GB NSRL database can be stored.</p>
 <p>Then, execute the following command to install FileTrove in the given directory (mind the period):</p>

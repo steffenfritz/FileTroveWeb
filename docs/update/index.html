@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Overview - filetrove</title>
+  <title>Update - filetrove</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="favicon.png">
@@ -18,7 +18,7 @@
 
 </head>
 
-<body class='page page-default-list'>
+<body class='page page-default-single'>
   <div id="main-menu-mobile" class="main-menu-mobile">
   <ul>
     
@@ -94,7 +94,7 @@
       <a href="/docs/install-filetrove/">Install FileTrove</a>
     </li>
     
-    <li class="">
+    <li class="active ">
       <a href="/docs/update/">Update</a>
     </li>
     
@@ -125,79 +125,22 @@
         </div>
         <div class="col-12 col-md-9">
           
-
-<span class="overview">Overview</span>
-<h1 class="title">Overview</h1>
-<div class="content">
-  <h2 id="filetrove">FileTrove</h2>
-<p>FileTrove indexes many files fast, detects their types and creates metadata for long term preservation.</p>
+<h1 class="title">Update</h1>
+<div class="content ">
+  <h2 id="update">Update</h2>
+<p>To use a newer version of FileTrove just download it from Github. However, some updates introduce new functions or database changes and newer version might not be compatible with older databases.</p>
+<p>The database of FileTrove can be updated with the tool admftrove that can be found in FileTrove&rsquo;s repository. admftrove updates the version and changes the database schema to be compatible with newer versions.</p>
+<p>Before doing the update, backup filetrove.db by copying it somewhere save!</p>
+<p>You can then update from one version to the next, e.g. from v1.0.0-DEV-7 to v1.0.0-DEV-8 and with the next update run from DEV-8 to DEV-9.</p>
+<p>admftrove expects the directory where filetrove.db is located.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> $ ./admftrove --updatedb PATH_TO_DB_DIRECTORY
+</span></span></code></pre></div><h2 id="update-paths">Update paths</h2>
+<p>1.0.0-DEV-8 &ndash;&gt; 1.0.0-DEV-9 : supported</p>
+<p>1.0.0-DEV-7 &ndash;&gt; 1.0.0-DEV-8 : supported</p>
+<p>1.0.0-DEV-6 &ndash;&gt; 1.0.0-DEV-7 : not supported</p>
 
 </div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/docs/install-filetrove/">Install FileTrove</a></h2>
-  <p>FileTrove is written in Golang and open source (AGPLv3). You can install it by compiling from source or use a precompiled executable for your platform. FileTrove is a single file application without external dependencies, except a NSRL Bolt database. FileTrove can download the database for you.
-Download On Github you can find ready-to-run executables for most common operating systems and platforms like Linux, MacOS or Windows on AMD64 and ARM64.</p>
 </div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/docs/update/">Update</a></h2>
-  <p>Update is done via admftrove. Listing of update paths.</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/docs/configure/">Configuration</a></h2>
-  <p>Configuration is done via command line flags.</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/docs/example/">FileTrove examples</a></h2>
-  <p>FileTrove is a command line tool. Therefore all examples are using your local terminal.
-Quickstart First you have to follow the installation instruction https://filetrove.fritz.wtf/docs/install-filetrove/
-Index recursively a directory:
-$ ./ftrove -i PATHTODIRECTORY You will see a progress bar. When it finishes you can export the data to a TSV file that can be imported into Excel or Numbers or read with any text editor.
-$ ./ftrove -l Copy the UUID, you need it for the export:</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/docs/showcase/">FileTrove Showcase</a></h2>
-  <p></p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/docs/faq/">FAQ</a></h2>
-  <p>FAQ</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/docs/impressum/">Imprint and contact</a></h2>
-  <p>Imprint / Impressum Steffen Fritz
-Hauffstraße 4 71696 Möglingen
-E-Mail: steffen AT fritz.wtf
-OpenPGP: Keyserver
-Issues: Github
-Support Information FileTrove is and will be forever open source and free of cost.
-However, support and features can be requested via
-Steffen Fritz - IT Consulting, https://fritz-itc.de
-See all legal information there, https://fritz-itc.de/datenschutz/ and https://fritz-itc.de/impressum/</p>
-</div>
-
-
-
 
         </div>
       </div>
