@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Overview on filetrove</title>
+    <link>/docs/</link>
+    <description>Recent content in Overview on filetrove</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Nov 2023 22:30:00 +1000</lastBuildDate>
+    <atom:link href="/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install FileTrove</title>
+      <link>/docs/install-filetrove/</link>
+      <pubDate>Tue, 28 Feb 2023 22:30:00 +1000</pubDate>
+      <guid>/docs/install-filetrove/</guid>
+      <description>FileTrove is written in Golang and open source (AGPLv3). You can install it by compiling from source or use a precompiled executable for your platform. FileTrove is a single file application without external dependencies, except a NSRL Bolt database. FileTrove can download the database for you.&#xA;Download On Github you can find ready-to-run executables for most common operating systems and platforms like Linux, MacOS or Windows on AMD64 and ARM64.</description>
+    </item>
+    <item>
+      <title>Configuration</title>
+      <link>/docs/configure/</link>
+      <pubDate>Tue, 28 Feb 2023 19:30:00 +1000</pubDate>
+      <guid>/docs/configure/</guid>
+      <description>Configuration is done via command line flags.</description>
+    </item>
+    <item>
+      <title>FileTrove examples</title>
+      <link>/docs/example/</link>
+      <pubDate>Tue, 28 Feb 2023 19:00:00 +1000</pubDate>
+      <guid>/docs/example/</guid>
+      <description>FileTrove is a command line tool. Therefore all examples are using your local terminal.&#xA;Quickstart First you have to follow the installation instruction https://filetrove.fritz.wtf/docs/install-filetrove/&#xA;Index recursively a directory:&#xA;$ ./ftrove -i PATHTODIRECTORY You will see a progress bar. When it finishes you can export the data to a TSV file that can be imported into Excel or Numbers or read with any text editor.&#xA;$ ./ftrove -l Copy the UUID, you need it for the export:</description>
+    </item>
+    <item>
+      <title>FileTrove Showcase</title>
+      <link>/docs/showcase/</link>
+      <pubDate>Sun, 19 Nov 2023 19:00:00 +1000</pubDate>
+      <guid>/docs/showcase/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FAQ</title>
+      <link>/docs/faq/</link>
+      <pubDate>Sat, 04 Nov 2023 19:30:00 +1000</pubDate>
+      <guid>/docs/faq/</guid>
+      <description>FAQ</description>
+    </item>
+    <item>
+      <title>Imprint and contact</title>
+      <link>/docs/impressum/</link>
+      <pubDate>Tue, 28 Feb 2023 22:30:00 +1000</pubDate>
+      <guid>/docs/impressum/</guid>
+      <description>Imprint / Impressum Steffen Fritz&#xA;Hauffstraße 4 71696 Möglingen&#xA;E-Mail: steffen AT fritz.wtf&#xA;OpenPGP: Keyserver&#xA;Issues: Github&#xA;Support Information FileTrove is and will be forever open source and free of cost.&#xA;However, support and feature requests can be requested via&#xA;Steffen Fritz - IT Consulting, https://fritz-itc.de&#xA;See all legal information there, https://fritz-itc.de/datenschutz/ and https://fritz-itc.de/impressum/</description>
+    </item>
+  </channel>
+</rss>

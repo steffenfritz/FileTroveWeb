@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Install FileTrove - filetrove</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.2abe4f9deee2e3e8ec440009003f7bb21c5c60b7915a1cf8ec38e682289bee57.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href=""><img width="70" height="70" alt="Logo" src="/images/ft_small.jpg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href=""><img  width="70" height="70" alt="Logo" src="/images/ft_small.jpg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+    <li class="active ">
+      <a href="/docs/install-filetrove/">Install FileTrove</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/configure/">Configuration</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/example/">FileTrove examples</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/showcase/">FileTrove Showcase</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/faq/">FAQ</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/impressum/">Imprint and contact</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">Install FileTrove</h1>
+<div class="content ">
+  <p>FileTrove is written in Golang and open source (AGPLv3). You can install it by compiling from source or use a precompiled executable for your platform. FileTrove is a single file application without external dependencies, except a NSRL Bolt database. FileTrove can download the database for you.</p>
+<h3 id="download">Download</h3>
+<p>On Github you can find ready-to-run executables for most common operating systems and platforms like Linux, MacOS or Windows on AMD64 and ARM64.</p>
+<p>Just download from <a href="https://github.com/steffenfritz/FileTrove/releases">Github</a>, extract the archive and run the program from a terminal/command line.</p>
+<p>Note: This project is called FileTrove, but the executable is called ftrove!</p>
+<p>The releases are tested and the latest version has no known bugs.</p>
+<h3 id="alternative-install-from-source">Alternative: Install from source</h3>
+<p>You can install ftrove from source by compiling it. With an installed Go compiler and set up workspace you can install it with</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">go install github.com/steffenfritz/FileTrove/cmd/ftrove@latest
+</span></span></code></pre></div><p>The binary can be found in $GOPATH/bin.</p>
+<h3 id="installation">Installation</h3>
+<p>Copy the binary to a location where FileTrove should save the results, logs and where the 3.5GB NSRL database can be stored.</p>
+<p>Then, execute the following command to install FileTrove in the given directory (mind the period):</p>
+<p>$ ./ftrove &ndash;install .</p>
+<p>During the installation FileTrove creates two directories, &ldquo;logs&rdquo; and &ldquo;db&rdquo;. It also asks you if it should download the NSRL database. The download via ftrove, i.e. during the installation, could be slow. You can answer &ldquo;no&rdquo; during the installation and download the database via BitTorrent from archive.org <a href="https://archive.org/details/nsrl_modern_minimal_2023.06.01">https://archive.org/details/nsrl_modern_minimal_2023.06.01</a>.</p>
+<p>After the bittorrent download you MUST copy the file into the db directory. If ftrove downloads the database you don&rsquo;t have to do anything, it places it into the correct location.</p>
+<p>FileTrove is installed and ready to go!</p>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.302a6fc365d5139fb98cf60bdb8f715d96257ea189161d36c190ccfa8182e569.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>

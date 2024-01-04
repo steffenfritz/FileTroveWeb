@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>FileTrove examples - filetrove</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.2abe4f9deee2e3e8ec440009003f7bb21c5c60b7915a1cf8ec38e682289bee57.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href=""><img width="70" height="70" alt="Logo" src="/images/ft_small.jpg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href=""><img  width="70" height="70" alt="Logo" src="/images/ft_small.jpg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+    <li class="">
+      <a href="/docs/install-filetrove/">Install FileTrove</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/configure/">Configuration</a>
+    </li>
+    
+    <li class="active ">
+      <a href="/docs/example/">FileTrove examples</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/showcase/">FileTrove Showcase</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/faq/">FAQ</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/impressum/">Imprint and contact</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">FileTrove examples</h1>
+<div class="content ">
+  <p>FileTrove is a command line tool. Therefore all examples are using your local terminal.</p>
+<h2 id="quickstart">Quickstart</h2>
+<p>First you have to follow the installation instruction <a href="https://filetrove.fritz.wtf/docs/install-filetrove/">https://filetrove.fritz.wtf/docs/install-filetrove/</a></p>
+<p>Index recursively a directory:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> $ ./ftrove -i PATHTODIRECTORY
+</span></span></code></pre></div><p>You will see a progress bar. When it finishes you can export the data to a TSV file that can be imported into Excel or Numbers or read with any text editor.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ ./ftrove -l
+</span></span></code></pre></div><p>Copy the UUID, you need it for the export:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> $ ./ftrove -t UUID
+</span></span></code></pre></div><p>For more options see ./ftrove -h</p>
+<h2 id="full-example">Full example</h2>
+<p>The following example will index all files, print all messages to the log file and the screen and read some EXIF data from jpeg and tiff files. The named archivist is &ldquo;Max Mustermann&rdquo; and the project is called after the first hard disk of Max Mustermann. With the d-flag a json file is passed that holds DublinCore metadata that is added to the session in FileTrove&rsquo;s database.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ ./ftrove -i /mnt/usbstick -V -e -a &#34;Max Mustermann&#34; -d dublincore.json -p &#34;Max Mustermann Harddisk No. 1&#34;
+</span></span></code></pre></div><h2 id="add-own-entries-to-nsrl-database">Add own entries to NSRL database</h2>
+<p>It can be handy to add own entries to the NSRL database. For example, some hash sums might be missing or you have files you want to mark as known. You can do that with the following steps.</p>
+<ol>
+<li>
+<p>Download the tool admftrove from <a href="https://github.com/steffenfritz/FileTrove/releases">https://github.com/steffenfritz/FileTrove/releases</a> for your platform. The file has a suffix, e.g. -linux-amd64. You can rename the file or keep the name. In the following steps the suffix is ommited.</p>
+</li>
+<li>
+<p>Copy the file to the location where you already have a nsrl.db file (this is important!):</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ cp admftrove DIR_LOCATION_OF_NSRL
+</span></span></code></pre></div><p>Depending on your operating system it might be necessary to make the file executable or allow it in the settings, e.g.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ chmod +x admftrove
+</span></span></code></pre></div><ol start="3">
+<li>
+<p>Prepare a text file that has the additional SHA1 hash sums, one per line.</p>
+</li>
+<li>
+<p>Add the hash sums with the following command:</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ ./admftrove --creatensrl PATH_TO_TEXT_FILE_WITH_HASHES
+</span></span></code></pre></div><p>This will not overwrite the nsrl.db file, it will add your SHA1s to the database file.</p>
+<p><em>Hint</em>: With this as a hack you can remove the NSRL check. Just create a text file with a non SHA1 string, e.g. &ldquo;deadbeaf&rdquo; and create a nsrl.db file with admftrove. FileTrove will use that file for the NSRL check. As it will not contain a valid SHA1, all files will be marked as FALSE and the check might get a little bit faster.</p>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.302a6fc365d5139fb98cf60bdb8f715d96257ea189161d36c190ccfa8182e569.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>
