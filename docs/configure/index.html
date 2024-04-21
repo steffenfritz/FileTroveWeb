@@ -7,7 +7,7 @@
   <title>Configuration - filetrove</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <link rel="icon" href="favicon.png">
+  <link rel="icon" href="/favicon.png">
 
   
   
@@ -41,10 +41,10 @@
     <div class='header'>
   <div class="container">
     <div class="logo">
-      <a href=""><img width="70" height="70" alt="Logo" src="/images/ft_small.jpg" /></a>
+      <a href="/"><img width="70" height="70" alt="Logo" src="/images/ft_small.jpg" /></a>
     </div>
     <div class="logo-mobile">
-      <a href=""><img  width="70" height="70" alt="Logo" src="/images/ft_small.jpg" /></a>
+      <a href="/"><img  width="70" height="70" alt="Logo" src="/images/ft_small.jpg" /></a>
     </div>
     <div id="main-menu" class="main-menu">
   <ul>
@@ -91,7 +91,7 @@
   <ul>
     
     <li class="">
-      <a href="/docs/install-filetrove/">Install FileTrove</a>
+      <a href="/docs/install-filetrove/">Installation</a>
     </li>
     
     <li class="active ">
@@ -103,11 +103,15 @@
     </li>
     
     <li class="">
-      <a href="/docs/example/">FileTrove examples</a>
+      <a href="/docs/example/">Examples</a>
     </li>
     
     <li class="">
-      <a href="/docs/showcase/">FileTrove Showcase</a>
+      <a href="/docs/showcase/">Showcase</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/creatensrl/">Create NSRL BoltDB</a>
     </li>
     
     <li class="">
@@ -128,16 +132,17 @@
 <h1 class="title">Configuration</h1>
 <div class="content ">
   <h2 id="command-line-options">Command Line Options</h2>
-<p>Version: 1.0.0-DEV-9</p>
+<p>Version: 1.0.0-DEV-16</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"> -a, --archivist string    The name of the person responsible for the scan.
 </span></span><span class="line"><span class="cl"> -d, --dublincore string   Add DublinCore metadata as a JSON file for a session (not single files).
 </span></span><span class="line"><span class="cl"> -e, --exifdata            Get some EXIF metadata from image files.
 </span></span><span class="line"><span class="cl"> -i, --indir string        Input directory to work on.
-</span></span><span class="line"><span class="cl">     --install string      Install FileTrove into the given directory.
+</span></span><span class="line"><span class="cl">     --install string      Install FileTrove into the given, existing directory.
 </span></span><span class="line"><span class="cl"> -l, --list-sessions       List session information for all scans. Useful for exports.
 </span></span><span class="line"><span class="cl"> -p, --project string      A name for the project or scan session.
 </span></span><span class="line"><span class="cl"> -r, --resume string       Resume an aborted session. Provide the session uuid of the aborted run. 
 </span></span><span class="line"><span class="cl"> -t, --export-tsv string   Export a session from the database to a TSV file. Provide the session uuid.
+</span></span><span class="line"><span class="cl"> -z, --timezone string     Set the time zone to a region in which the timestamps of files are to be translated. If this flag is not set, the local time zone is used. Example: Europe/Berlin
 </span></span><span class="line"><span class="cl"> -V, --verbose             Print messages also to the terminal (stdout).
 </span></span><span class="line"><span class="cl"> -v, --version             Show version and build
 </span></span></code></pre></div><h2 id="more-detailed-configuration">More detailed configuration</h2>
@@ -150,6 +155,7 @@
 <p>-p : You can pass a name of a project that is connected to the session. It will be stored in the database and is in the export TSV file.</p>
 <p>-r : You can resume a session when it was cancelled on purpose or if a run crashed. Get the session UUID with the -l flag and pass it to the -r flag.</p>
 <p>-t : The export flag writes all information of a session to TSV files. It detects if the session was run with the EXIF or Dublin Core flag and just creates the relevant export files.</p>
+<p>-z : Set the time zone to a region in which the timestamps of files are to be translated. If this flag is not set, the local time zone is used. Example: Europe/Berlin</p>
 <p>-V : Using this flag you see all output on your screen, not just in the log file.</p>
 <p>-v : This prints the version and build. This is important when creating a bug report.</p>
 

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Overview - filetrove</title>
+  <title>Create NSRL BoltDB - filetrove</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="/favicon.png">
@@ -18,7 +18,7 @@
 
 </head>
 
-<body class='page page-default-list'>
+<body class='page page-default-single'>
   <div id="main-menu-mobile" class="main-menu-mobile">
   <ul>
     
@@ -110,7 +110,7 @@
       <a href="/docs/showcase/">Showcase</a>
     </li>
     
-    <li class="">
+    <li class="active ">
       <a href="/docs/creatensrl/">Create NSRL BoltDB</a>
     </li>
     
@@ -129,86 +129,21 @@
         </div>
         <div class="col-12 col-md-9">
           
-
-<span class="overview">Overview</span>
-<h1 class="title">Overview</h1>
-<div class="content">
-  <h2 id="filetrove">FileTrove</h2>
-<p>FileTrove indexes many files fast, detects their types and creates metadata for long term preservation.</p>
+<h1 class="title">Create NSRL BoltDB</h1>
+<div class="content ">
+  <p>FileTrove needs a BoltDB that holds SHA1 hashes from the NSRL. You can download a prepared database from within FileTrove while installing it. This database is created from the &ldquo;Modern Minimal&rdquo; RDS. If you want to create your own database or if you want a specific database version you can follow this steps. You will need the tool admftrove from the <a href="https://github.com/steffenfritz/FileTrove/releases">repository</a>.</p>
+<ol>
+<li>Download a RDS set from the NSRL webpage, check the hash sums of the file and unzip the archive file: <a href="https://www.nist.gov/itl/ssd/software-quality-group/national-software-reference-library-nsrl/nsrl-download/current-rds">NSRL</a> (<em>Note:</em> The uncompressed files for the minimal set are ~150 GB).</li>
+<li>Change into the directory of the unzipped archive, e.g. <em>cd RDS_2024.03.1_modern_minimal</em>.</li>
+<li>Get the SHA1 hashes from the SQLite database and write one per line into a text file: <em>sqlite3 RDS_2024.03.1_modern_minimal.db &ldquo;select distinct sha1 from file&rdquo; &gt; sha1_uniq_2024.03.01_modern_minimal.txt</em>.</li>
+<li>Feed the text file to <em>admftrove</em>, this creates the file <em>nsrl.db</em>. You also have to provide the &ndash;nsrlversion flag. This string is used by ftrove for the session information, e.g. <em>admftrove &ndash;creatensrl sha1_uniq_2024.03.01_modern_minimal.txt &ndash;nsrlversion RDS_2024.03.1_modern_minimal</em>.</li>
+<li><em>Optional</em>: As Bolt creates files with a huge overhead, you should optimize the size with <em>bbolt compact</em> (it is really bbolt, see <a href="https://github.com/etcd-io/bbolt">BBolt</a>. <em>bbolt compact -o OUTPUTFILE SOURCEFILE</em></li>
+<li>Copy the compacted <em>nsrl.db</em> into the db directory of ftrove.</li>
+</ol>
+<p>Note: The creation of the database file will take several hours.</p>
 
 </div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/docs/install-filetrove/">Installation</a></h2>
-  <p>FileTrove is written in Golang and open source (AGPLv3). You can install it by compiling from source or use a precompiled executable for your platform. FileTrove is a single file application without external dependencies, except a NSRL Bolt database. FileTrove can download the database for you.
-Download On Github you can find ready-to-run executables for most common operating systems and platforms like Linux, MacOS or Windows on AMD64 and ARM64.</p>
 </div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/docs/configure/">Configuration</a></h2>
-  <p>Configuration is done via command line flags.</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/docs/update/">Update</a></h2>
-  <p>Update is done via admftrove. Listing of update paths.</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/docs/example/">Examples</a></h2>
-  <p>FileTrove is a command line tool. Therefore all examples are using your local terminal.
-Quickstart First you have to follow the installation instruction https://filetrove.fritz.wtf/docs/install-filetrove/
-Index recursively a directory:
-$ ./ftrove -i PATHTODIRECTORY You will see a progress bar. When it finishes you can export the data to a TSV file that can be imported into Excel or Numbers or read with any text editor.
-$ ./ftrove -l Copy the UUID, you need it for the export:</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/docs/showcase/">Showcase</a></h2>
-  <p></p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/docs/creatensrl/">Create NSRL BoltDB</a></h2>
-  <p>How to create a NSRL BoltDB from NSRL SQLite</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/docs/faq/">FAQ</a></h2>
-  <p>FAQ</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/docs/impressum/">Imprint and contact</a></h2>
-  <p>Imprint / Impressum Steffen Fritz
-Hauffstraße 4 71696 Möglingen
-E-Mail: steffen AT fritz.wtf
-OpenPGP: Keyserver
-Issues: Github
-Support Information FileTrove is and will be forever open source and free of cost.
-However, support can be requested via
-Steffen Fritz - IT Consulting, https://fritz-itc.de
-See all legal information there, https://fritz-itc.de/datenschutz/ and https://fritz-itc.de/impressum/</p>
-</div>
-
-
-
 
         </div>
       </div>

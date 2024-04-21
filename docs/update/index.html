@@ -7,7 +7,7 @@
   <title>Update - filetrove</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <link rel="icon" href="favicon.png">
+  <link rel="icon" href="/favicon.png">
 
   
   
@@ -41,10 +41,10 @@
     <div class='header'>
   <div class="container">
     <div class="logo">
-      <a href=""><img width="70" height="70" alt="Logo" src="/images/ft_small.jpg" /></a>
+      <a href="/"><img width="70" height="70" alt="Logo" src="/images/ft_small.jpg" /></a>
     </div>
     <div class="logo-mobile">
-      <a href=""><img  width="70" height="70" alt="Logo" src="/images/ft_small.jpg" /></a>
+      <a href="/"><img  width="70" height="70" alt="Logo" src="/images/ft_small.jpg" /></a>
     </div>
     <div id="main-menu" class="main-menu">
   <ul>
@@ -91,7 +91,7 @@
   <ul>
     
     <li class="">
-      <a href="/docs/install-filetrove/">Install FileTrove</a>
+      <a href="/docs/install-filetrove/">Installation</a>
     </li>
     
     <li class="">
@@ -103,11 +103,15 @@
     </li>
     
     <li class="">
-      <a href="/docs/example/">FileTrove examples</a>
+      <a href="/docs/example/">Examples</a>
     </li>
     
     <li class="">
-      <a href="/docs/showcase/">FileTrove Showcase</a>
+      <a href="/docs/showcase/">Showcase</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/creatensrl/">Create NSRL BoltDB</a>
     </li>
     
     <li class="">
@@ -128,15 +132,17 @@
 <h1 class="title">Update</h1>
 <div class="content ">
   <h2 id="update">Update</h2>
-<p>To use a newer version of FileTrove just download it from Github. However, some updates introduce new functions or database changes and newer version might not be compatible with older databases.</p>
+<p>To use a newer version of FileTrove just download it from Github. However, some updates introduce new functions or database changes and newer versions might not be compatible with older databases.</p>
 <p>The database of FileTrove can be updated with the tool admftrove that can be found in FileTrove&rsquo;s repository. admftrove updates the version and changes the database schema to be compatible with newer versions.</p>
 <p>Before doing the update, backup filetrove.db by copying it somewhere save!</p>
 <p>You can then update from one version to the next, e.g. from v1.0.0-DEV-7 to v1.0.0-DEV-8 and with the next update run from DEV-8 to DEV-9.</p>
 <p>admftrove expects the directory where filetrove.db is located.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> $ ./admftrove --updatedb PATH_TO_DB_DIRECTORY
-</span></span></code></pre></div><h2 id="update-paths">Update paths</h2>
-<p>1.0.0-DEV-8 &ndash;&gt; 1.0.0-DEV-9 : supported</p>
-<p>1.0.0-DEV-7 &ndash;&gt; 1.0.0-DEV-8 : supported</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> $ ./admftrove --updatedb FILETROVE_INSTALL_PATH/db
+</span></span></code></pre></div><h2 id="update-paths-and-changelog">Update paths and changelog</h2>
+<p>1.0.0-DEV-15 &ndash;&gt; 1.0.0-DEV-16 : NOT supported. Version DEV-16 changes the semantics of <em>filename</em> and <em>dirname</em> and adds <em>filepath</em> and <em>dirpath</em>, according to Wikidata. For more info see <a href="https://github.com/steffenfritz/FileTrove/issues/30">https://github.com/steffenfritz/FileTrove/issues/30</a>.</p>
+<p>1.0.0-DEV-14 &ndash;&gt; 1.0.0-DEV-15 : supported.</p>
+<p>1.0.0-DEV-13 &ndash;&gt; 1.0.0-DEV-14 : supported. Version DEV-14 alters the <em>files</em> and <em>directories</em> tables by adding a column</p>
+<p>1.0.0-DEV-7 &ndash;&gt; 1.0.0-DEV-13 : supported</p>
 <p>1.0.0-DEV-6 &ndash;&gt; 1.0.0-DEV-7 : not supported</p>
 
 </div>
